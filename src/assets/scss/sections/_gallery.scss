@@ -1,0 +1,14 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &_item {
+        margin-right: 15px;
+        margin-bottom: 15px;
+
+        & .item_link {
+            display: block;
+        }
+    }
+}

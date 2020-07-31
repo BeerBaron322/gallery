@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/list">go to list</a><br>
+    <a href="/item_228">go to img item</a>
+    <div class="content">
+        <div class="main">
+            <div class="item-modal"></div>
+        </div>
+    </div>
+    <script id="list_template" type="text/x-handlebars-template">
+        <div class="gallery">
+            {{#each data}}
+                <div class="gallery_item">
+                    <a class="item_link" href="/item_{{this.id}}">
+                        <img class="item_image" src="{{this.url}}" alt="">
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    </script>
+    <script id="item_tempale" type="text/x-handlebars-template">
+        <div class="photo-content">
+            <img src="{{data.url}}" alt="">
+        </div>
+        <div class="comments">
+            {{#each data.comments}}
+                
+            {{/each}}
+        </div>
+    </script>
+</body>
+</html>

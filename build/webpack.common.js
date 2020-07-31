@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 const PATHS = {
     src: path.resolve(__dirname, '../src'), 
@@ -36,6 +37,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: `${PATHS.src}/index.html`
         }),
+        new webpack.ProvidePlugin({
+            Handlebars: '../node_modules/'
+        })
     ],
 
     resolve: {

@@ -31,5 +31,9 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9"
+  },
+  "dependencies": {
+    "@types/handlebars": "^4.1.0",
+    "handlebars": "^4.7.6"
   }
 }

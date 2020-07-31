@@ -6,7 +6,12 @@ module.exports = merge(common, {
     devServer: {
         port: 4200,
         overlay: true,
+        // historyApiFallback: {
+        //     index: `${common.externals.paths.src}/index.html`
+        // },
+        historyApiFallback: true,
         contentBase: common.externals.paths.dist,
+        publicPath: '/'
     },
 
     module: {

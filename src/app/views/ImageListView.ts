@@ -10,6 +10,8 @@ export default class ImageListView extends View {
         itemsLink.forEach((itemLink) => {
             itemLink.addEventListener('click', (event) => {
                 event.preventDefault();
+                let modalWindow = document.querySelector('.modal-overlay');
+                modalWindow?.classList.toggle('active');
                 let path: URL;
                 if (event.currentTarget instanceof HTMLAnchorElement) {
                     path = new URL(event.currentTarget.href);

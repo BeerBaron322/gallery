@@ -11,7 +11,7 @@ export default class Controller {
     constructor () {
         this.model = new Model();
         this.imageListView = new ImageListView('.main');
-        this.imageItemView = new ImageItemView('.main');
+        this.imageItemView = new ImageItemView('.modal-overlay');
     }
 
 
@@ -27,11 +27,16 @@ export default class Controller {
         this.model.getImage(id).then(data => {
             this.imageItemView.setData(data);
             this.imageItemView.render("#item_tempale");
+            this.imageItemView.handlerOverlayClick(this.overlayClickHandler);
         })
     }
 
     itemClickHandler(path: string) {
         Router.redicrect(path);
+    }
+
+    overlayClickHandler() {
+        Router.redicrect('/list');
     }
 }
 

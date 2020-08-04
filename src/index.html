@@ -6,13 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/list">go to list</a><br>
-    <a href="/item_228">go to img item</a>
     <div class="content">
-        <div class="main">
-            <div class="item-modal"></div>
-        </div>
+        <div class="main"></div>
     </div>
+    <div class="modal-overlay"></div>
     <script id="list_template" type="text/x-handlebars-template">
         <div class="gallery">
             {{#each data}}
@@ -25,13 +22,15 @@
         </div>
     </script>
     <script id="item_tempale" type="text/x-handlebars-template">
-        <div class="photo-content">
-            <img src="{{data.url}}" alt="">
-        </div>
-        <div class="comments">
-            {{#each data.comments}}
-                
-            {{/each}}
+        <div class="image-item">
+            <div class="photo-content">
+                <img src="{{data.url}}" alt="">
+            </div>
+            <div class="comments">
+                {{#each data.comments}}
+                    <p>{{this.text}}</p>
+                {{/each}}
+            </div>
         </div>
     </script>
 </body>

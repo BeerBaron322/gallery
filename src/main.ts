@@ -14,19 +14,20 @@ router.registerRouts([
     }}
 ])
 router.init();
+router.redicrect('/list');
 
-links.forEach((link) => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        let path: URL;
-        if (event.target instanceof HTMLAnchorElement) {
-            path = new URL(event.target.href);
-        } else {
-            return;
-        }
-        router.redicrect(path.pathname);
-    });
-});
+// links.forEach((link) => {
+//     link.addEventListener('click', (event) => {
+//         event.preventDefault();
+//         let path: URL;
+//         if (event.target instanceof HTMLAnchorElement) {
+//             path = new URL(event.target.href);
+//         } else {
+//             return;
+//         }
+//         router.redicrect(path.pathname);
+//     });
+// });
     
 
 
